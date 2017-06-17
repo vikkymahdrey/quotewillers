@@ -8,6 +8,7 @@
 		<non-jta-data-source>java:comp/env/jdbc/AtappDB</non-jta-data-source> 
 		<class>com.team.atapp.domain.AdminUser</class>
 		<class>com.team.atapp.domain.Role</class>
+		<class>com.team.atapp.domain.Quote</class>
 		
 
 		<properties>

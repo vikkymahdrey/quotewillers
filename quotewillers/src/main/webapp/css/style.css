@@ -1023,9 +1023,9 @@ FOOTER SECTION
 -------------------------------------------------------------------*/
 .footer-widget-wrapper {
     background-repeat: repeat-x;
-    background-image: -webkit-linear-gradient(45deg, #3a2772 30%, #190b2e 75%);
-    background-image: -o-linear-gradient(45deg, #3a2772 30%, #190b2e 75%);
-    background-image: linear-gradient(45deg, #3a2772 30%, #190b2e 75%);
+    background-image: -webkit-linear-gradient(45deg, #3a2772 100%, #190b2e 100%);
+    background-image: -o-linear-gradient(45deg, #3a2772 100%, #190b2e 100%);
+    background-image: linear-gradient(45deg, #3a2772 100%, #190b2e 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, startColorstr='#3a2772', endColorstr='#190b2e');
     color: #ffffff;
     padding: 100px 0 46px;

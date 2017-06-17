@@ -1,9 +1,8 @@
 package com.team.atapp.domain;
 
 import java.io.Serializable;
-import java.util.Date;
-
 import javax.persistence.*;
+import java.util.Date;
 
 
 /**
@@ -34,14 +33,12 @@ public class AdminUser implements Serializable {
 
 	private String gender;
 
-	
-
 	private String lastname;
 
 	private String loginId;
 
 	private String password;
-	
+
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date pwdChangedDate;
 
@@ -141,6 +138,14 @@ public class AdminUser implements Serializable {
 		this.password = password;
 	}
 
+	public Date getPwdChangedDate() {
+		return this.pwdChangedDate;
+	}
+
+	public void setPwdChangedDate(Date pwdChangedDate) {
+		this.pwdChangedDate = pwdChangedDate;
+	}
+
 	public Role getRole() {
 		return this.role;
 	}
@@ -148,11 +153,5 @@ public class AdminUser implements Serializable {
 	public void setRole(Role role) {
 		this.role = role;
 	}
-	public Date getPwdChangedDate() {
-		return pwdChangedDate;
-	}
 
-	public void setPwdChangedDate(Date pwdChangedDate) {
-		this.pwdChangedDate = pwdChangedDate;
-	}
 }

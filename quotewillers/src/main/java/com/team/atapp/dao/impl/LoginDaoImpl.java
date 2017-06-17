@@ -16,7 +16,7 @@ public class LoginDaoImpl extends AbstractDao implements LoginDao {
 	private static final AtLogger logger = AtLogger.getLogger(LoginDaoImpl.class);
 	
 	public AdminUser getLoginUser(String username, String password)	throws Exception {
-		
+		logger.debug("IN loginDao");
 		String query="from AdminUser where loginId=:loginId and password=:password";
 		Query q=getEntityManager().createQuery(query);
 			q.setParameter("loginId", username);
