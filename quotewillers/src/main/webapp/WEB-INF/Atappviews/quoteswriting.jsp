@@ -174,7 +174,7 @@
 															    <option value="Emotional">Emotional</option>
 															    <option value="Funny">Funny</option>
 															    <option value="Inspirational">Inspirational</option>
-															    <option value="For Friends">For Friends</option>
+															    <option value="ForFriends">For Friends</option>
 															    <option value="Romantic">Romantic</option>
 															    
   															</select>

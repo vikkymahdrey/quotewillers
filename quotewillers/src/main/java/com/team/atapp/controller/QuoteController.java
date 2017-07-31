@@ -1,5 +1,8 @@
 package com.team.atapp.controller;
 
+import java.util.List;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,5 +47,62 @@ public class QuoteController {
 		return retVal;
 		
 	}
+	
+	@RequestMapping(value= {"/love"}, method=RequestMethod.GET)
+	public String loveHandler(HttpServletRequest request,Map<String,Object> map,RedirectAttributes redirectAttributes) throws Exception {
+		logger.debug("In Love Quote ");
+		//String quotetype=request.getParameter("quote");
+		List<Quote> quoteList=quoteService.getQuotes("Love");
+			map.put("quoteList", quoteList);
+		return "quotes";
+	}
+	
+	@RequestMapping(value= {"/emotional"}, method=RequestMethod.GET)
+	public String emotionalHandler(HttpServletRequest request,Map<String,Object> map,RedirectAttributes redirectAttributes) throws Exception {
+		logger.debug("In Emotional Quote ");
+		//String quotetype=request.getParameter("quote");
+		List<Quote> quoteList=quoteService.getQuotes("Emotional");
+		map.put("quoteList", quoteList);
+		return "quotes";
+	}
+	
+	@RequestMapping(value= {"/funny"}, method=RequestMethod.GET)
+	public String funnyHandler(HttpServletRequest request,Map<String,Object> map,RedirectAttributes redirectAttributes) throws Exception {
+		logger.debug("In funny Quote");
+		//String quotetype=request.getParameter("quote");
+	
+		List<Quote> quoteList=quoteService.getQuotes("Funny");
+		map.put("quoteList", quoteList);
+		return "quotes";
+	}
+	
+	
+	@RequestMapping(value= {"/inspirational"}, method=RequestMethod.GET)
+	public String inspirationalHandler(HttpServletRequest request,Map<String,Object> map,RedirectAttributes redirectAttributes) throws Exception {
+		logger.debug("In Inspirational Quote");
+		//String quotetype=request.getParameter("quote");
+		List<Quote> quoteList=quoteService.getQuotes("Inspirational");
+		map.put("quoteList", quoteList);
+		return "quotes";
+	}
+	
+	@RequestMapping(value= {"/romantic"}, method=RequestMethod.GET)
+	public String romanticHandler(HttpServletRequest request,Map<String,Object> map,RedirectAttributes redirectAttributes) throws Exception {
+		logger.debug("In Inspirational Quote");
+		//String quotetype=request.getParameter("quote");
+		List<Quote> quoteList=quoteService.getQuotes("Romantic");
+		map.put("quoteList", quoteList);
+		return "quotes";
+	}
+	
+	@RequestMapping(value= {"/forFriends"}, method=RequestMethod.GET)
+	public String forFriendsHandler(HttpServletRequest request,Map<String,Object> map,RedirectAttributes redirectAttributes) throws Exception {
+		logger.debug("In Inspirational Quote");
+		//String quotetype=request.getParameter("quote");
+		List<Quote> quoteList=quoteService.getQuotes("ForFriends");
+		map.put("quoteList", quoteList);
+		return "quotes";
+	}
+
 	
 }	

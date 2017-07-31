@@ -24,13 +24,31 @@ public class LoginController {
 	@Autowired
 	private LoginService loginService;
 		
+		
 	
 	@RequestMapping(value= {"/"})
 	public String defaultURL(){
 		logger.info(" React App login request");
-		return "atapp";
+		return "index1";
 	}
 	
+	@RequestMapping(value= {"/homepage"})
+	public String homePage(){
+		return "index1";
+	}
+	
+	
+	/*@RequestMapping(value= {"/quote"})
+	public String defaultURL(HttpServletRequest request,Map<String,Object> map,RedirectAttributes redirectAttributes){
+		logger.info(" React App login request");
+		List<Quote> quoteList=(List<Quote>) request.getAttribute("quoteList");
+		logger.debug("Size of quoteList",quoteList);
+		if(quoteList!=null && !quoteList.isEmpty()){
+			logger.debug("Size of quoteList1",quoteList.size());
+		}	
+		map.put("quoteList", quoteList);
+		return "index1";
+	}*/
 	
 	@RequestMapping(value= {"/login"})
 	public String quotewillersLogin(){

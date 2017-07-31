@@ -1,5 +1,7 @@
 package com.team.atapp.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,11 @@ public class QuoteServiceImp implements QuoteService {
 	
 	public void insertQuote(Quote quote) throws Exception {
 		quoteDao.save(quote);
+	}
+
+
+	public List<Quote> getQuotes(String quotetype) throws Exception {
+		return quoteDao.getQuotes(quotetype);
 	}
 
 }
